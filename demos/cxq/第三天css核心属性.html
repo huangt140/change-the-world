@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性布局</title>
+</head>
+<style type="text/css">
+    .site-head {
+        display: flex;
+        justify-content: space-around;
+        height: 60px;
+        line-height: 60px;
+    }
+
+   .nav-inner:hover {
+     background-color: cornsilk;
+    } 
+    .site-head-left{
+        flex: 1;
+        background-image: linear-gradient(to left, cadetblue , white);
+    }
+    .site-head-mid{
+        flex:3;
+        display: flex;
+        justify-content: space-around;
+        background-color: cadetblue;
+       
+    }
+    .site-head-right{
+        flex:1;
+        background-image: linear-gradient(to right, rgba(219, 95, 57, 0.795) , white);
+    }
+    .content-video{
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .video{
+        margin-top: 25px;
+    }
+</style>
+
+<body>
+    <div class="site-head">
+        <div class="site-head-left"></div>
+        <div class="site-head-mid">
+            <div class="nav-inner"><span>视频专区</span></div>
+            <div class="nav-inner">小游戏</div>
+            <div class="nav-inner">文</div>
+            <div class="nav-inner">四度男爵</div>
+            <div class="nav-inner">五度男爵</div>
+        </div>
+        <div class="site-head-right"></div>
+    </div>
+    </div>
+    <div class="content-video">
+        <div class="video">
+            <video src="https://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>
+
+        </div>
+        <div class="video">
+            <video src="https://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>
+
+        </div>
+        <div class="video">
+            <video src="https://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>
+
+        </div>
+        <div class="video">
+            <video src="https://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>
+
+        </div>
+        <div class="video">
+            <video src="https://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>
+
+        </div>
+        <div class="video">
+            <video src="https://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>
+
+        </div>
+       <div class="video">
+            <video src="https://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>
+
+        </div>
+        <div class="video">
+            <video src="https://www.w3school.com.cn/i/movie.ogg" controls="controls"></video>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
