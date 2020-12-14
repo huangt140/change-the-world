@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<ul>
+						<li>给他爱</li>
+						<li>暗黑血统</li>
+						<li>虐杀原形</li>
+						<li>连连看</li>
+					</ul>
+					<button type="button" id="btn">dafa</button>
+					<script type="text/javascript">
+						var btn=document.getElementById("btn");
+						btn.onclick=function(){
+							var lis=document.getElementsByTagName("li");
+							for(var i=0;i<lis.length;i++){
+								alert(lis[i].innerHTML);
+							}
+						}
+					</script>
+	</body>
+</html>

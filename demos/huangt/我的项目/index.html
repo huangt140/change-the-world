@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div id="outer">
+			<img src="img/上拉.png" alt="上拉" >
+			<br>
+			<button type="button" id="prev">上一张</button>
+			<button type="button" id="next">下一张</button>
+			<p id="page"></p>
+		</div>
+		<script type="text/javascript">
+			var btn01=document.getElementById("prev");
+			var btn02=document.getElementById("next");
+			var img=document.getElementsByTagName("img")[0];
+			//创建一个数组，用来保存这个路径
+			var imgArr=['img/上拉.png','img/设置.png','img/首页.png','img/搜索.png','img/下拉.png','img/学校.png'];
+			var index=0;
+			
+			btn01.onclick=function(){
+					if(index==0){
+						index=imgArr.length
+					}
+					index--;
+
+			img.src=imgArr[index]
+			var page=document.getElementById("page");
+			page.innerHTML=index+1;
+			
+			}
+			btn02.onclick=function(){
+			if(index==imgArr.length-1){
+				index=-1
+			}
+					index++;
+			
+			img.src=imgArr[index]
+			var page=document.getElementById("page");
+			page.innerHTML=index+1;
+			}
+			// var page=document.getElementById("page");
+			// page.innerHTML=index+1;
+		</script>
+	</body>
+</html>

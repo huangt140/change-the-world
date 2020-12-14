@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		//对象是一个客观存在的事物；构造函数泛指某一大类；
+		//利用构造对象的过程也称为
+		//new 关键字 执行过程 可以在内存中创建一个空的对象
+		//this就会指向刚才创建的空对象
+		//执行构造函数的代码，给这个空对象添加属性和方法
+		// //返回这个对象
+		//   function Star(uname,age,gender){                 //构造函数第一个字母大写
+		// 			  this.age=age;
+		// 			  this.name=uname;
+		// 			  this.gender=gender;
+		// 		      this.sing=function(){
+		// 				  var s="sing";
+		// 			  console.log(s);
+		// 		  }
+		// 		  }
+		// 		  var ldh=new Star("li",18,"男");				  
+		// 		  var zxy=new Star("zhang",15,"女");
+		// 		  var ht=new Star("ht",145);
+		//         console.log(ht.name);
+		// 		console.log(ht.gender);
+		// 		ht.sing();
+		//遍历对象
+				var obj={
+					name:"huangtong",
+					age:18,
+					gender:"male",
+					fn:function(){
+						console.log("我真牛逼");
+					}
+				}                          //for_in遍历我们的对象
+   //              for(var k in obj){
+			// // document.write(k);
+				
+			  	obj.fn();
+			// 	}                            //for（变量 in 对象）{}				
+				// document.write(obj.name);
+	</script>
+	<body>
+		
+	</body>
+</html>

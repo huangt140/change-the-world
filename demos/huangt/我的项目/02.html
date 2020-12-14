@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="">
+			<ul id="name">
+				<li>Claud</li>
+				<li id="tommy">Tommy</li>
+				<li >CJ</li>
+				<li>Franklin</li>
+				<li>Mike</li>
+			</ul>
+		</div>
+		<div id="">
+			<ul id="game">
+				<li>gta3</li>
+				<li>gtavc</li>
+				<li>gtasa</li>
+				<li>gta5</li>
+			</ul>
+			<br>
+			username
+			<input type="text" name="" id="m" value="male" />
+			<!-- 文本框的属性值，就是文本框的内容 -->
+		</div>
+		<div id="">
+			<button type="button" id="btn01">1</button>
+		    <button type="button" id="btn02">2</button>
+			<button type="button" id="btn03">获取父节点</button>
+			<button type="button" id="btn04">获上一个点</button>
+			<button type="button" id="btn05">获去</button>
+			<button type="button" id="btn06">设置</button>
+			<button type="button" id="btn07">7</button>
+		</div>
+		<script type="text/javascript">
+			function myClick(Idstr,fun){
+				var btn=document.getElementById(Idstr);
+				btn.onclick=fun;
+				}
+			
+			var btn01=document.getElementById("btn01");
+			btn01.onclick=function(){
+				var name=document.getElementById("name");
+				var lis1=name.getElementsByTagName("li");
+				alert(lis1.length);
+			}
+			var btn02=document.getElementById("btn02");
+			btn02.onclick=function(){
+				var game=document.getElementById("game");
+				var lis2=game.lastElementChild;
+				alert(lis2.innerHTML);
+			}
+			myClick("btn03",function(){
+				var tommy=document.getElementById("tommy");
+				var pn=tommy.parentNode;
+				// alert(pn.nodeName);
+				// alert(pn.innerHTML);
+				alert(pn.innerText);
+			});
+			myClick("btn04",function(){
+				var tom=document.getElementById("tommy");
+				var prev=tom.previousElementSibling;
+				alert(prev.innerHTML);
+			})
+			myClick("btn05",function(){
+				var name=document.getElementById("m");
+				alert(name.value);
+			})
+			myClick("btn06",function(){
+				var name=document.getElementById("m");
+				name.value="宝批龙";
+			})
+			myClick("btn07",function(){
+				var tommy=document.getElementById("tommy");
+				var pn=tommy.parentNode;
+				alert(pn.innerHTML);
+			})
+	 
+		</script>
+	</body>
+</html>

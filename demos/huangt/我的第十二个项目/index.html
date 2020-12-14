@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			// var body=document.getElementsByTagName("body")[0];
+			// console.log(body);
+			window.onload=function(){
+			// var body=document.body;  //属性body保存的是body的引用
+			// var html=document.documentElement;
+			// var all=document.all;
+			// console.log(all.length);
+			// var box1=document.getElementsByClassName("box1");
+	      //   var div=document.querySelector(".box1 div");   //使用该方法只返回第一个结果
+ 			   // console.log(div.innerHTML); 
+			   function myClick(idstr,fun){
+				   var btn=document.getElementById(idstr);
+				   btn.onclick=fun;
+			   };
+			   myClick("btn01",function(){    //创建广州节点
+				   var li=document.createElement("li");    //创建元素节点
+				   var txt1=document.createTextNode("gta ls");  //创建 文本节点
+				   li.appendChild(txt1);                     //向父节点添加一个子节点
+				   var game=document.getElementById("game");
+				   game.appendChild(li);
+			   })
+			   myClick("btn02",function(){                     //在指定节点前插入一个子节点
+				   var li=document.createElement("li");
+				   var txt2=document.createTextNode("gta4 re");
+				   li.appendChild(txt2);
+				   var gtavc=document.getElementById("gta vc");   //找到插入节点
+				   var game=document.getElementById("game");   //找到父节点
+				   game.insertBefore(li,gtavc);
+			   })
+			   myClick("btn03",function(){                     //替换节点
+				   var li=document.createElement("li");
+				   var txt3=document.createTextNode("gta6");
+				   li.appendChild(txt3);
+				   var game=document.getElementById("game");
+				   var gta4=document.getElementById("gta4");
+				   game.replaceChild(li,gta4);
+			   })
+			   myClick("btn04",function(){                        //删除节点
+				    var game=document.getElementById("game");
+					var remove=document.getElementById("gta5");
+					game.removeChild(remove);
+			   })
+			   myClick("btn05",function(){
+				   var gta5=document.getElementById("gta5");
+				   gta5.innerHTML="老子的gta6呢";
+			   })
+			   myClick("btn06",function(){
+				   var game=document.getElementById("game");
+				   game.innerHTML+="<li>给他爱6</li>";
+			   })
+			   var alld=document.getElementsByTagName("a");
+			   for(i=0;i<alld.length;i++){
+				   alld[i].onclick=function(){	
+					   var tr=this.parentNode.parentNode;
+					   var td=tr.getElementsByTagName("td")[0];
+					   
+					   var a=confirm("确认删除"+td.innerHTML+"吗？");       //如果点击确认，confirm返回true,否则返回false;
+					   if(a){
+						   tr.parentNode.removeChild(tr);
+					   }
+					  
+					   return false;             //取消超链接的页面跳转行为
+				   }
+			   }
+			   var bttn=document.getElementById("bttn");
+			   bttn.onclick=function(){
+				   var col1=document.getElementById("col1").value;
+				   var col2=document.getElementById("col2").value;
+				   var col3=document.getElementById("col3").value;
+				   //将获取到的信息保存到tr中
+				   var tr=document.createElement("tr");
+				   var td1=document.createElement("td");
+				   var td2=document.createElement("td");
+				   var td3=document.createElement("td");
+				   var a=document.createElement("a");
+				   //创建文本
+				   var td1txt=document.createTextNode(col1);
+				   var td2txt=document.createTextNode(col2);
+				   var td3txt=document.createTextNode(col3);
+				   var td4txt=document.createTextNode("delete");
+				   td1.appendChild(td1txt);
+				   td2.appendChild(td2txt);
+				   td3.appendChild(td3txt);
+				   a.appendChild(td4txt);
+				   tr.appendChild(td1);
+				   tr.appendChild(td2);
+				   tr.appendChild(td3);
+				   tr.appendChild(a);
+				   a.href="javascript:;";
+				   a.onclick=function(){
+					   var tr1=a.parentNode.parentNode;
+					   var m=confirm("确认删除"+td1txt+"吗？");
+					   if(m){
+						   tr1.parentNode.removeChild(tr1);
+					   }
+				   }
+				   var tablee=document.getElementById("nametable");
+				   tablee.appendChild(tr);
+			   }
+			}
+		</script>
+	</head>
+	<body>
+		<div id="total">
+			<div id="" class="inner">
+				<p>你喜欢哪款游戏</p>
+				<ul id="game">
+					<li>gta3</li>
+					<li id="gta vc">gta vc</li>
+					<li>gta sa</li>
+					<li id="gta4">gta4</li>
+					<li id="gta5">gta5</li>
+				</ul>
+			</div>
+		</div>
+		<div id="button">
+			<button type="button" id="btn01">按钮1</button>
+			<button type="button" id="btn02">按钮2</button>
+			<button type="button" id="btn03">按钮3</button>
+			<button type="button" id="btn04">按钮4</button>
+			<button type="button" id="btn05">按钮5</button>
+			<button type="button" id="btn06">按钮6</button>
+            
+		</div>
+		<br>
+		<table border="" cellspacing="0" cellpadding="" id="nametable">
+			<tr><th>Header</th></tr>
+			<tr>
+				<td>Data1</td>
+				<td>Data</td>
+				<td>Data</td>
+				<td><a href="dvv">delete</a></td>
+				</tr>
+			<tr>
+					<td>Data2</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td><a href="xasx">delete</a></td>
+					</tr>
+			<tr>
+				<td>Data3</td>
+				<td>Data</td>
+				<td>Data</td>
+				<td><a href="eqeqr">delete</a></td>
+				</tr>
+		</table>
+		<br>
+		<div id="">
+			<table border="0" cellspacing="0" cellpadding="" >
+				<tr>
+					<td>字段1:</td>
+					<td>
+						<input type="" name="" id="col1" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td>字段2:</td>
+					<td>
+						<input type="" name="" id="col2" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td>字段3:</td>
+					<td>
+						<input type="" name="" id="col3" value="" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button type="button" id="bttn">submit</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

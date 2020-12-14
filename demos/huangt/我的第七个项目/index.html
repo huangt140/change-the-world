@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			//格式日期
+			// var date=new Date();
+			// console.log(date.getHours());
+			// console.log(date.getMinutes());
+			// console.log(date.getSeconds());
+			//要求封装一个函数返回当前的时分秒
+			// function getTime(){
+			// 	var time=new Date();
+			// 	var h=time.getHours();
+			// 	h=h<10?'0'+h:h;
+			// 	var m=time.getMinutes();
+			// 	m=m<10?'0'+m:m;
+			// 	var s=time.getSeconds();
+			// 	s=s<10?'0'+s:s;
+			// 	return h+':'+m+':'+s;
+				
+			// }
+			// console.log(getTime());
+			//获取总的毫秒形式——距1970-1-1至今过了多少毫秒
+			// //通过valueOf()或者getTime()
+			// var date =new Date();
+			// console.log(date.valueOf());
+			// // console.log(date.getTime());
+			// var date2=+new Date();
+			// console.log(date2);
+			//倒计时、
+			// function countDown(time){
+			// 	var nowTime=+new Date();
+			// 	var input=+new Date(time);
+			// 	var times=(input-nowTime)/1000;
+			// 	var d=parseInt(times/60/60/24);
+			// 	d=d<10?'0'+d:d;
+			// 	var h=parseInt(times/60/60%24);
+			// 	h=h<10?'0'+h:h;
+			// 	var m=parseInt(times/60%60);
+			// 	m=m<10?'0'+m:m;
+			// 	var s=parseInt(times%60);
+			// 	s=s<10?'0'+s:s;
+			// 	return d+'day'+h+'hours'+m+'minutes'+s+'seconds';
+			// }
+			// console.log(countDown('2020-11-25 18:00:00'));
+			// var date=new Date();
+			// console.log(date);
+			//创建数组
+			//1.利用数组字面量
+			// var arr=[1,2,34,4];
+			//2.利用new Array();
+			// var arr1=new Array(2);//长度为2，里面有两个空的数组元素
+			// console.log(arr1);
+			// var arr2=new Array(2,2,3)
+			// console.log(arr2);
+			// function reverse(arr){
+			// 	var newArr=[];
+			// 	for(var i=arr.length-1;i>=0;i--){
+			// 		newArr[newArr.length]=arr[i];
+			// 	}
+			// 	return newArr;
+			// }
+			// console.log(reverse([1,2,4]))
+			//检测是否为数组
+			//1.instanceof运算符可以用来检测是否为数组
+			// var arr=[];
+			// var obj={};
+			// console.log(arr instanceof Array);
+			// console.log(obj instanceof Array);
+			// //2.Array.isArray();
+			// console.log(Array.isArray(arr));
+			// console.log(Array.isArray(obj));
+			// //5数组对象
+			// //（1）push()在数组末尾添加一个或者多个数组元素
+			// var arr=[1,2,3];
+			// // arr[3]=4;
+			// // console.log(arr);
+			// // arr.push(4,5,'混子');
+			// // console.log(arr.push(4,5,'黄铜'));//push完毕后返回的值是新数组的长度
+			// // console.log(arr);
+			// //2.unshift在数组的开头添加一个或者多个元素
+			// arr.unshift(21,'hdfuh');
+			// console.log(arr);
+			// //删除数组元素的方法   pop()——删除数组的最后一个元素
+			// // arr.pop();
+			// console.log(arr.pop());
+			// //shift() 删除数组的第一个元素
+			// //筛选数组
+			// var arr=[1500,1200,2000,2100,1800];
+			// var newArr=[];
+			// for(var i=0;i<arr.length;i++){
+			// 	if(arr[i]<2000){
+			// 		newArr.push(arr[i]);
+			// 	}
+			// }
+			// console.log(newArr);
+			// //翻转数组
+			// var arr=[1,23,54,542];
+			// arr.reverse();
+			// console.log(arr);
+			// //数组排序
+			// var arr1=[1,14,5,36];
+			// arr1.sort(function(a,b){
+			// 	return b-a;  //按照升序的顺序排列，降序变为b-a
+			// });     
+			// console.log(arr1);
+			//5.数组索引
+			// var arr=['red','yellow','black','purple'];
+			// console.log(arr.indexOf('yellow'))//返回该元素的索引号，而lastIndexOf是从末尾开始查找
+			// //数组去重
+			
+			// function unique(arr){
+			// 	var newArr=[];
+			// 	for(var i=0;i<arr.length;i++){
+			// 		if(newArr.indexOf(arr[i])===-1){
+			// 			newArr.push(arr[i]);
+			// 		}
+			// 	}
+			// 	return newArr;
+			// }
+			// var demo=unique(['c','a','z','a','x','a','x','c','b']);
+			// console.log(demo);
+			//数组转换为字符串
+			// //toSring()
+			// var arr=[1,2,3];
+			// console.log(arr.toString());
+			// // //join 里面可以跟分隔符
+			// var arr=['green','red','pink'];
+			// console.log(arr.join("-"));
+			// //字符串对象
+			var str="str";
+			console.log(str.length);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<p>爱好运动</p>
+		<input type="checkbox" name="" id="getall" value=""  />
+		<p>全选</p>
+		<br>
+		<form action="" method="">
+			<input type="checkbox" name="items" id="" value="足球" />足球
+			<input type="checkbox" name="items" id="" value="篮球" />篮球
+			<input type="checkbox" name="items" id="" value="跑步" />跑步
+			<input type="checkbox" name="items" id="" value="散打" />散打
+		</form>
+		
+		<br>
+		<br>
+		<button type="button" id="all">全选</button>
+		<button type="button" id="noall">全不选</button>
+		<button type="button" id="re">反选</button>
+		<button type="button" id="re2">反选2</button>
+		<button type="button" id="submit">提交</button>
+		<script type="text/javascript">
+			function myClick(idstr,fun){
+				var btn=document.getElementById(idstr);
+				btn.onclick=fun;
+			};
+			myClick("all",function(){
+				var all=document.getElementsByName("items");
+				for(var i=0;i<all.length;i++){
+					all[i].checked=true;
+				}
+				var getall=document.getElementById("getall");
+				getall.checked=true;
+			});
+			myClick("noall",function(){
+				var nall=document.getElementsByName("items");
+				for(var i=0;i<nall.length;i++){
+					nall[i].checked=false;
+				}
+				var getall=document.getElementById("getall");
+				getall.checked=false;
+			});
+			myClick("re",function(){
+				var re=document.getElementsByName("items");
+				for(i=0;i<re.length;i++){
+					if(re[i].checked==true){
+						re[i].checked=false;
+					}else{
+						re[i].checked=true;
+					}
+				}
+			})
+			myClick("re2",function(){
+				var re2=document.getElementsByName("items");
+				for(i=0;i<re2.length;i++){
+					re2[i].checked=!re2[i].checked;
+				}
+				getall.checked=true;
+				for(var j=0;j<items.length;j++){
+					
+					if(!items[j].checked){
+						getall.checked=false;
+					}
+				}
+			})
+			myClick("submit",function(){
+				var sub=document.getElementsByName("items");
+				for(i=0;i<sub.length;i++){
+					if(sub[i].checked){
+						alert(sub[i].value);
+					}
+				}
+			})
+			var getall=document.getElementById("getall");
+			getall.onclick=function(){
+			
+				var items=document.getElementsByName("items");
+				for(i=0;i<items.length;i++){
+					if(this.checked){   //在事件的响应函数中，事件是给谁绑定的，this就是谁
+						items[i].checked=true;
+					}else{
+						items[i].checked=false;
+					}
+				}
+			}
+		// var items=document.getElementsByName("items");
+		// var a=1
+	 //    for(var j=0;j<items.length;j++){
+		// 	if(items[j].checked==true){
+		// 		a++;
+		// 	}
+		// }
+		// if(a==5){
+		// 	getall.checked=true;
+		// }else{
+		// 	getall.checked=false;
+		// }
+		var items=document.getElementsByName("items");
+		for(var i=0;i<items.length;i++){
+			items[i].onclick=function(){
+				getall.checked=true;
+				for(var j=0;j<items.length;j++){
+					
+					if(!items[j].checked){
+						getall.checked=false;
+					}
+				}
+			}
+		}
+		</script>
+	</body>
+</html>

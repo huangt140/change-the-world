@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+<!-- 		<script type="text/javascript">
+			window.onload(){
+				alert('vaf');
+			}
+		</script> -->
+	</head>
+	<body>
+		<!-- <button type="button" id="btn" onmousemove="alert('还是宝批龙');">宝批龙</button>
+		<button type="button" id="btn" onclick="alert('还是宝批龙');">宝批龙2</button>
+		<button type="button" id="btn" ondblclick="alert('还是宝批龙');">宝批龙3</button>
+		<!-- <script type="text/javascript">
+			var btn=document.getElementById("btn");
+			btn.innerHTML="哈麻批";
+		</script> --> 
+		<button type="button" id="btn">爆破</button>
+	<!-- 	<script type="text/javascript">
+			var btn=document.getElementById("btn");
+			btn,onclick=function(){
+				alert('你已经死了');
+			}
+		</script> -->
+		<!-- onload事件会在整个页面加载完成之后才执行 -->
+	 <div id="">
+	 	<div id="">
+	 		<p>你喜欢哪个城市</p>
+			<ul id='city'>
+				<li id="bj">北京</li>
+				<li>伤害</li>
+				<li>东京</li>
+				<li>首尔</li>
+			</ul>
+			<div>
+			<br>
+			<div id="">
+				
+			
+			<p>你喜欢哪款游戏</p>
+               <ul id="game">
+				<li>给他爱</li>
+				<li>暗黑血统</li>
+				<li>虐杀原形</li>
+				<li>连连看</li>
+			</ul>
+			<input type="radio" name="gender" id="" value="mal" />male
+			<input type="radio" name="gender" id="" value="female" />female
+			
+	 	</div>
+		<div id="button">
+			<button type="button" id="btn01">查找#bj节点</button>
+			<button type="button" id="btn02">查找节点</button>
+			<button type="button" id="btn03">查找节点</button>
+			<button type="button" id="btn04">查找节点</button>
+			<button type="button" id="btn05">返回city的所有节点</button>
+			<button type="button" id="btn06">查找节点</button>
+		</div>
+	 </div>
+	 <script type="text/javascript">
+	 	//查找#bj节点
+		var btn01=document.getElementById("btn01");
+		btn01.onclick=function(){
+			alert("hello");
+		}
+		// var bj=document.getElementById("bj");
+		// alert(bj.innerHTML);
+		//查找所有的li节点
+		var btn02=document.getElementById("btn02");
+		btn.onclick=function(){
+			var lis=docunment.getElementsByTagName("li");
+			alert(lis);
+		}
+		var btn03=document.getElementById("btn03");
+		btn03.onclick=function(){
+			var inputs=document.getElementsByName("gender");
+			for(var j=0;j<inputs.length;j++){
+				alert(inputs[j].name);
+			}
+		}
+		var btn04=document.getElementById("btn04");
+		btn04.onclick=function(){
+			var city=document.getElementById('city');
+			var liss=city.getElementsByTagName("li");
+			for(i=0;i<liss.length;i++){
+				alert(liss[i].innerHTML)
+			}
+		}
+		var btn05=document.getElementById("btn05");
+		btn05.onclick=function(){
+			var city=document.getElementById('city');
+			var cns=city.childNodes;//childNodes会获取包括文本节点在内的所有节点
+			// alert(cns.length);
+			var cns2=city.children;  //children可以获取当前元素的所有子元素,不包括空白节点
+			alert(cns2.length);
+				}
+		var btn06=document,getElementById("btn06");
+		btn06.onclick=function(){
+			var game=document.getElementsById("game");
+			var first=game.getElementsByTagName("li");
+			alert(first.length);
+		}
+	 </script>
+	</body>
+</html>

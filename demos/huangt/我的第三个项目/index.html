@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+				
+			// function isou(num){
+			// 	console.log(num%2==0);
+			// }
+			// isou(7);
+			// var a=isou(19);
+			// console.log(a);
+			// function area(r){
+			// 	return area=r*r;
+			// }
+			// // console.log(area(4));
+			// function volume(area){
+			// 	return volume=area*4;
+			// }
+			// console.log(volume(area(8)));
+			// function sayhello(name,age,gender,address){
+			// 	console.log(name,gender);
+			// // }
+			// // sayhello("时","12","男","南京");
+			// var obj={
+			// 	name:"黄",
+			// 	age:"14",
+			// 	gender:"男",
+			// 	address:"wuhan"
+			// };
+			// function getsum(num1,num2){
+			// 	var sum=0;
+			// 	for (var i=num1;i<=num2;i++){
+			// 		sum+=i;
+			// 	}
+			// 	console.log(sum);
+			// }
+			// getsum(10,100);
+			//函数就是被封装了的可以重复使用的代码块
+			//函数的声明
+			// function 函数名(){
+				
+			// 	函数体
+			// }
+			// function sayhi(){
+			// 	console.log("hi~~~~");
+			// }
+			// sayhi();
+			//函数不调用，自己不执行
+			//调用函数   函数名（）
+			//函数的封装是把多个功能封装起来，对外提供一个接口
+		// getsum(1,10);
+		//我们可以利用函数的参数实现函数重复不同的代码；
+		//形参  
+		// function 函数(形参1,形参2){       形参是形式上的参数
+			
+		// }
+		// 函数(实参,实参)        实参是实际的参数
+		// function cook(are){
+		// 	console.log(are);
+		// }
+		// cook("我叼你老母");  
+		// //形参是用来接收实参的
+		// cook("fuck");
+		// //函数的参数可以有，也可以没有
+		// function getssum(a,b){
+		// 	var sum=a+b;
+		// 	console.log(sum);
+		// }
+		//函数的返回 
+			
+		// // function 函数名(){
+		// // 	return 需要返回的结果;
+		// // }
+		// // // 函数名()
+		// // function getresult(){
+		// // 	return 2134;
+		// // }
+		// // console.log(getresult());
+		// function max(a,b){
+		// 	// if(a>b){
+		// 	// 	num=a;
+				
+		// 	// }else{
+		// 	// 	num=b;
+		// 	// }
+		// 	// return num;
+		// return a>b?a:b;
+		// }
+		// // console.log(max(432,2));
+		// function getMax(arr){
+		// 	var max=arr[0];
+		// 	for(var i=1;i<=arr.length;i++){
+		// 		if(arr[i]>max){
+		// 			max=arr[i]
+		// 		}
+		// 	}
+		// 	return max;
+		// }
+		// var a=getMax([1,34,5,623,67,312,434,56,6,7,8]);
+		// console.log(a);
+		// // //return终止函数
+		// // function getsum(a,b){
+		// 	return [a+b,a-b];         //return后面的代码不会被执行，且只能返回一个值，返回的结果是最后的一个值
+		// 	alert("fahj;dfh");
+		// }
+		// document.write(getsum(63,23));
+		// //return 返回的是return后面的值，如果没有则返回undefined
+		// //break 结束当前循环
+		// //5.argument的使用
+		// //argument存储了传递的所有的实参
+		// function fn(){
+		// 	// console.log(arguments);
+		// 	// console.log(arguments.length);
+		// 	// console.log(arguments[2]);
+		// 	for(var i=0;i<arguments.length;i++){
+		// 		console.log(arguments[i])
+		// 	}
+		// }
+		// fn();
+		// //利用函数求任意个数的最大值
+		// function getmax(arr){
+		// 	var max=arr[0];
+		// 	for(i=0,i)
+		// }
+		function getmax(){
+			var max=arguments[0];
+			for(var i=1;i<arguments.length;i++){
+				if(arguments[i]>max){
+					max=arguments[i];
+				}
+			}
+			return max;
+		}
+		console.log(getmax(1,34,5,6,7,89));
+		// function reverse(arr){
+		// 	var newArr=[];
+		// 	for(var i=0;i<arr.length;i++){
+		// 		newArr[arr.length-i-1]=arr[i];
+		// 	}
+		// 	return newArr;
+		// }
+		// var arr1=reverse([13,34,56,788,99,23,445,33]);
+		// var arr2=reverse(['red','green','black']);
+		// console.log(arr2);
+		//函数封装判断闰年
+	
+	// 	 result=panduan(2000);
+	// 	document.write(result);
+		//函数可以调用函数	
+		// function fn1(){
+		// 	console.log(11);
+		// 	fn2();
+		// }
+		// fn1();
+		// function fn2(){
+		// 	console.log(22);
+		// }
+	
+	//函数的两种的声明方式
+	//1.利用函数关键字来自定义函数
+	//2.var 变量名=function(){}
+	//作用域理解：代码名字在哪个范围内其效果，目的是为了提高程序的可靠性
+	//作用域分类es6：全局作用域（整个script标签），局部作用域（在函数内部就是局部作用域，即代码的名字只在函数内部起效果）。
+	//全局变量和局部变量——全局变量，局部变量
+	//在函数内部没有声明，直接赋值的变量也是全局变量；函数的实参也是局部变量
+	//局部变量比较节约内存资源
+	//作用域链：只要是代码，就有作用域，如果函数中还有函数，那就又诞生一个作用域；内部函数访问外部函数的变
+	//预解析
+	//JS运行分两步，1.预解析会把js里面所有var和function提升到当前作用域的最前面2.代码执行从上往下
+	//预解析分为变量提升（把变量提升到当前作用域的最前面）和函数提升（把所有的函数声明提升到当前作用域的前面），
+	//     var num=10;
+	// 	fun();
+	// 	function fun(){
+	// 		console.log(num);
+	// 		var num=20;
+	// 		console.log(num);	
+	// 	}
+	// var a=18;
+	// f1();
+	// function f1(){
+	// var b=9;
+	// console.log(a);
+	// console.log(b);
+	// var a="123";
+	// }
+	// f1();
+	// console.log(c);
+	// console.log(b);
+	// console.log(a);
+	// function f1(){
+	// 	var a=b=c=9;   //这个写法相当于var a=9;b=9;+c=9;集体声明为var a =9,b=9,c=9;
+	// 	               //b和c此时直接当全局变量；
+	// 	console.log(a);
+	// 	console.log(b);
+	// 	console.log(c);
+	// }
+	// //对象——一个具体的事物，由属性和方法组成
+	// //为什么需要对象？可以使用变量保存多个值
+	// //创建对象<object>
+	// //字面量来创建对象
+	// 	var obj={
+	// 		name:'黄铜',
+	// 		age:18,
+	// 		gender:"女",
+	// 		sayHi:function(){   //方法
+	// 			console.log("hi~");
+	// 		}
+	// 	}
+ //        //里面的属性或者方法采用2.多个
+	// 		//调用对象的属性，我们采取的是对象名。属性名
+	// 	document.write(obj.name);
+	// 	// document.write(\n);
+	//  //    document.write(obj.sayHi());
+	     //变量属性的相同点：都是用来保存数据的；不同点：变量是单独声明并赋值；
+		 //属性在对象里面不需要声明
+		 //利用new Object 创建对象
+		//  var obj =new Object();            //
+		//  obj.name="黄铜";
+		//  obj.age=18;
+		//  obj.sayHi=function(){
+		// 	 console.log("hi~~");
+		//  }
+		//  console.log(obj.name);
+		// obj.sayHi();
+		//利用构造函数来创建对象，可以一下创建很多个对象
+		//构造函数，就是将我对象里面相同的属性封装；
+		//构造函数将数据的公共属性抽取出来；
+		//语法：
+			
+		// function 构造函数名(){
+		// 	this.属性=值;
+		// 	this.方法=function(){
+				
+		// 	}
+		// }
+		// //new 构造函数名（）；——调用
+		//   function Star(name,age,gender){                 //构造函数第一个字母大写
+		// 	  this.age=age;
+		// 	  this.name=name;
+			 
+		// 	  this.gender=gender;
+		//       this.sing=function(sang){
+		// 	  console.log(sang);
+		//   }
+		//   }
+		//   var ldh=new Star("li",18,"男");
+		  
+		//   var zxy=new Star("zhang",15,"女");
+		//   var ht=new Star("ht",145,"男");
+  //         ldh.sing=("冰雨");
+		  
+		  
+		</script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>
