@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color: darkkhaki ;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box1=document.getElementById("box1");
+				var btn01=document.getElementById("btn01");
+				btn01.onclick=function(){
+					box1.style.width="100px";    //通过JS修改样式   语法：元素。style。样式名=值
+					box1.style.height="300px";
+					box1.style.backgroundColor="yellow";
+					//通过style属性设定的样式都是内联样式
+					
+				}
+				var btn02=document.getElementById("btn02");
+				btn02.onclick=function(){
+				var obj=getComputedStyle(box1,null);    //对象中封装了当前元素的样式；
+					alert(obj.width);     
+				}
+				function getstyle(obj,name){
+					return getComputedStyle(obj,null)[name];
+				}
+				
+				var btn03=document.getElementById("btn03");
+				btn.onclick=function(){
+					alert(getstyle(box1,"height"));
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button type="button" id="btn01">按钮1</button>
+		<button type="button" id="btn02">按钮2</button>
+		<button type="button" id="btn03">按钮3</button>
+		<br>
+		<br>
+		<div id="box1" >
+			
+		</div>
+	</body>
+</html>
